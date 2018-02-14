@@ -3,6 +3,7 @@ from django_extensions.db.models import TimeStampedModel
 
 
 class Category(models.Model):
+    name = models.CharField('이름', max_length=100)
     parent = models.ForeignKey('self', models.SET_NULL, null=True, blank=True, verbose_name='상위 분류')
 
     def __str__(self):
@@ -19,7 +20,7 @@ class Issue(TimeStampedModel):
         (2, '완료')
     ], null=True, blank=True)
     content = models.TextField('내용')
-    code_place = models.TextField('코드 위치')
+    code_place = models.TextField('코드 위치', null=True, blank=True)
     categories = models.ManyToManyField(Category, verbose_name='분류')
 
     def __str__(self):
