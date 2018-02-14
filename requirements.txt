@@ -1,0 +1,6 @@
+# for test
+pytest
+pytest-django
+pytest-cov
+django-test-plus
+model_mommy
