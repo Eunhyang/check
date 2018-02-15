@@ -15,6 +15,7 @@ class Category(models.Model):
 
 
 class Issue(TimeStampedModel):
+    parent = models.ForeignKey('self', models.SET_NULL, null=True, blank=True, verbose_name='상위 이슈')
     status = models.PositiveSmallIntegerField('상태', choices=[
         (1, '보류'),
         (2, '완료')
