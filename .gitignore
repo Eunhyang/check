@@ -169,3 +169,6 @@ front/webpack-stats.json
 front/webpack-stats-prod.json
 front/shop/static/css/*.css
 package-lock.json
+
+# Secret key
+secrets.json
