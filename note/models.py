@@ -44,3 +44,4 @@ class Memo(TimeStampedModel):
 
     class Meta:
         verbose_name = '메모'
+        verbose_name_plural = verbose_name
